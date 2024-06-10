@@ -118,9 +118,27 @@ Question 3: Arrow Functions`)
  *         console.log(lunchTime('Pizza','Water'))
  * ↓ YOUR CODE HERE ↓ */
 
+   const lunchTime = (foodChoice, drinkChoice) => {
+      return `${myName} and my friend 
+            ${myFriendsName}
+               will be eating
+                  ${foodChoice} and drinking 
+                  ${drinkChoice}. `
+      };
+
+      console.log(lunchTime('Pizza', 'Water'));
+
 //Question: What would your function look like if we were using the old way of creating a function?
 //Answer:
+/*   function lunchTime (foodChoice, drinkChoice) = {
+      `return ${myName} and my friend 
+               ${myFriendsName}
+               will be eating
+                  ${foodChoice} and drinking 
+                  ${drinkChoice}`} 
+*/
 
+console.log ("end of Q3 \n");
 /*---------------------------------- Callbacks -------------------------------------*/
 console.log(`-------------------------- 
 Question 4: Callbacks`)
@@ -134,5 +152,12 @@ Question 4: Callbacks`)
  * Step 3: console.log() your new function, foodForTodayAndTomorrow, and pass in lunchTime('newFoodItem', 'newDrinkItem') as the argument for the "callbackFunction" parameter.
  *
  * ↓ YOUR CODE HERE ↓ */
+   const foodForTodayAndTomorrow = (tomorrowsFoodChoice, tomorrowsDrinkChoice, callbackFunction) => {
+      return `${callbackFunction} Tomorrow we want ${tomorrowsFoodChoice} and ${tomorrowsDrinkChoice}.`
+         };
+   
+   console.log(foodForTodayAndTomorrow('Hot Dogs', 'Pepsi', lunchTime('Steak', 'Beer')));
 
-console.log(`-----------Finished------------`)
+   console.log ("end of Q4 \n");
+
+   console.log(`-----------Finished------------`)
